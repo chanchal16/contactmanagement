@@ -1,0 +1,26 @@
+<mat-form-field class="search-full-width" floatLabel="never" >
+  <input  type='search' matInput placeholder="Search" id="search" name="search" [(ngModel)]='filterTerm'><mat-icon matSuffix>search</mat-icon>
+</mat-form-field>
+
+
+
+
+<mat-selection-list #shoes [multiple]="false" >
+  <mat-list-option  value="{{contact.Name}}"  *ngFor="let contact of contacts| filter:filterTerm" (click)="onSelect('detail',contact.id)" ><a routerLink="detail/{{contact.id}}"></a>
+    <img *ngIf="contact.Avatar; else noAvatar" matListAvatar src={{contact.Avatar}} alt=""><ng-template class="initials" #noAvatar>{{contact.Name|initials}}</ng-template>&nbsp;
+    {{contact.Name}}
+  </mat-list-option>
+
+</mat-selection-list>
+
+
+
+<!--<ul class="contact-list">
+  <li *ngFor="let contact of contacts">
+    <a routerLink="detail/{{contact.id}}"></a><img src={{contact.Avatar}}>&nbsp; {{contact.Name}}
+  </li>
+</ul>-->
+
+
+
+

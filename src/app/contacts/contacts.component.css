@@ -1,0 +1,35 @@
+.search-full-width{
+  width: 100%!important;
+
+}
+input{
+  font-size: 16px;
+  font-weight: 200;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contact-list {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+
+.mat-list-item.mat-list-single-selected-option {
+  color: white;
+  font-weight: 400;
+  background: rgb(178, 170, 250);
+}
+.contact-list li:hover{
+  background: paleturquoise;
+}
+
+ng-template .initials{
+  color: white;
+  font-size: 15px;
+  line-height: 14px;
+  letter-spacing: normal;
+  background: rgb(182, 215, 253);
+}
+
+
+
+

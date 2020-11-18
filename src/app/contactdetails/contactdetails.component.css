@@ -1,0 +1,33 @@
+flex-container{
+  background: royalblue;
+}
+
+.example-full-width {
+  width: 90%;
+  padding-left: 10px;
+
+}
+input{
+  font-size: 18px;
+
+}
+h2{
+  color: rgb(116, 4, 221);
+}
+
+::ng-deep.my-snackbar{
+  color: lime!important;
+}
+
+.example-card{
+  max-width: 550px!important;
+  height: auto;
+  margin: 50px 80px;
+}
+.fx-spacer{
+  flex: 1 1 auto;
+  float: right;
+}
+
+
+

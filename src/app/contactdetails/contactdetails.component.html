@@ -1,0 +1,54 @@
+
+<section class="main-container">
+  <div  class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayoutGap="15px" fxLayoutAlign="center">
+    <mat-card class="example-card" *ngIf="user" fxFlex="calc(33%-15px)" fxFlex.sm="calc(50%-15px)">
+      <h2>Contact Details: </h2>
+
+      <mat-card-content >
+        <div *ngIf="user">
+          <form (submit)="onSubmit(userForm)" #userForm="ngForm">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Name" name="Name"  [(ngModel)]="user.Name">
+              <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field><br>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Mobile" name="mob"  [(ngModel)]="user.mob">
+              <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field><br>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Email" name="email"  [(ngModel)]="user.email">
+              <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field><br>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Gender" name="gender"  [(ngModel)]="user.gender">
+              <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field><br>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Address" name="address"  [(ngModel)]="user.address">
+              <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field><br>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="City" name="city"  [(ngModel)]="user.city">
+              <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field><br>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Job Title" name="Jobtitle"  [(ngModel)]="user.Jobtitle">
+              <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field><br>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Organization" name="Rrganization"  [(ngModel)]="user.Organization">
+              <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field><br>
+            <div class="fx-spacer">
+              <button type="submit" mat-raised-button color="accent" (click)="openSnackBar('Updated successfully!!','Ok','my-snackbar')" >Update</button>&nbsp;
+              <button type="submit" mat-raised-button color="warn" (click)="cancelEdit()">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+
+
+</section>
